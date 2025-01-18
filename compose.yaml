@@ -1,0 +1,10 @@
+services:
+  air-monitor:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - ${PORT:-5000}:8000
+    devices:
+      - ${DEVICE_PATH}:/dev/ud-co2s
+    environment:
+      DEVICE_PATH: /dev/ud-co2s
