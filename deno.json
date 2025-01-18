@@ -1,0 +1,14 @@
+{
+  "schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
+  "exclude": ["ud-co2s"],
+  "fmt": {
+    "proseWrap": "preserve"
+  },
+  "imports": {
+    "@std/dotenv": "jsr:@std/dotenv@^0.225.3",
+    "@std/path": "jsr:@std/path@^1.0.8"
+  },
+  "tasks": {
+    "serve": "deno serve -A --port 3000 server.ts"
+  }
+}
